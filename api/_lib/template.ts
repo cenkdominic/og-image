@@ -133,8 +133,3 @@ export function getHtml(parsedReq: ParsedRequest) {
     </body>
 </html>`;
 }
-
-
-function getPlusSign(i: number) {
-    return i === 0 ? '' : '<div class="plus">+</div>';
-}
