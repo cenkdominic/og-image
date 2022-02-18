@@ -45,8 +45,6 @@ function getCss(theme: string, fontSize: string) {
 
     body {
         background: ${background};
-        background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
-        background-size: 100px 100px;
         height: 100vh;
         display: flex;
         text-align: center;
@@ -100,7 +98,15 @@ function getCss(theme: string, fontSize: string) {
         font-style: normal;
         color: ${foreground};
         line-height: 1.8;
-    }`;
+    }
+    .subheading {
+        font-family: 'Inter', sans-serif;
+        font-size: ${sanitizeHtml(fontSize)};
+        font-style: normal;
+        color: ${foreground};
+        line-height: 1.8;
+    }
+    `;
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
@@ -123,6 +129,10 @@ export function getHtml(parsedReq: ParsedRequest) {
             </div>
             <div class="spacer">
             <div class="heading">${emojify(
+                md ? marked(text) : sanitizeHtml(text)
+            )}
+            </div>
+            <div class="subheading">${emojify(
                 md ? marked(text) : sanitizeHtml(text)
             )}
             </div>
