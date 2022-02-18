@@ -25,7 +25,7 @@ const ImagePreview = ({ src, onclick, onload, onerror, loading }: ImagePreviewPr
 }
 
 interface DropdownOption {
-    heading: string;
+    text: string;
     value: string;
 }
 
@@ -205,7 +205,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
         fontSize = '100px',
         theme = 'light',
         md = true,
-        heading = '**Hello** World',
+        text = '**Hello** World',
         images=[imageLightOptions[0].value],
         widths=[],
         heights=[],
@@ -218,7 +218,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
     const mdValue = md ? '1' : '0';
     const imageOptions = theme === 'light' ? imageLightOptions : imageDarkOptions;
     const url = new URL(window.location.origin);
-    url.pathname = `${encodeURIComponent(heading)}.${fileType}`;
+    url.pathname = `${encodeURIComponent(text)}.${fileType}`;
     url.searchParams.append('theme', theme);
     url.searchParams.append('md', mdValue);
     url.searchParams.append('fontSize', fontSize);
@@ -277,10 +277,10 @@ const App = (_: any, state: AppState, setState: SetState) => {
                 H(Field, {
                     label: 'Text Input',
                     input: H(TextInput, {
-                        value: heading,
+                        value: text,
                         oninput: (val: string) => {
                             console.log('oninput ' + val);
-                            setLoadingState({ heading: val, overrideUrl: url });
+                            setLoadingState({ text: val, overrideUrl: url });
                         }
                     })
                 }),
