@@ -45,6 +45,7 @@ function getCss(theme: string, fontSize: string) {
 
     body {
         background: ${background};
+        background-color: red;
         background-size: 100px 100px;
         height: 100vh;
         display: flex;
@@ -100,7 +101,15 @@ function getCss(theme: string, fontSize: string) {
         font-style: normal;
         color: ${foreground};
         line-height: 1.8;
-    }`;
+    }
+    
+    .image {
+        background: #fff;
+        width: 1200px;
+        height: 630px;
+    }
+    
+    `;
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
@@ -114,7 +123,7 @@ export function getHtml(parsedReq: ParsedRequest) {
         ${getCss(theme, fontSize)}
     </style>
     <body>
-        <div>
+        <div class="image">
             <div class="spacer">
             <div class="logo-wrapper">
                 ${images.map((img, i) =>
