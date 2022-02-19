@@ -67,8 +67,18 @@ function getCss(theme: string, fontSize: string) {
         font-style: normal;
         color: ${foreground};
         line-height: 1.8;
-        width: 1160px;
-        height: 400px;
+        width: 1120px;
+        height: 200px;
+    }
+    
+    .subheadline {
+        font-family: 'Inter', sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        color: ${foreground};
+        line-height: 1.8;
+        width: 1120px;
+        height: 200px;
     }
     
     .image {
@@ -99,6 +109,10 @@ export function getHtml(parsedReq: ParsedRequest) {
                 md ? marked(text) : sanitizeHtml(text)
             )}
             </div>
+            
+            <div class="subheadline">Cenk Özbakır
+            </div>
+            
         </div>
         <script>
         textFit(document.querySelector(".headline"));
