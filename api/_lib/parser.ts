@@ -17,6 +17,7 @@ export function parseRequest(req: IncomingMessage) {
     const arr = (pathname || '/').slice(1).split('.');
     let extension = '';
     let text = '';
+    let author = '';
     if (arr.length === 0) {
         text = '';
     } else if (arr.length === 1) {
