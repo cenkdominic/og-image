@@ -205,7 +205,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
         fontSize = '100px',
         theme = 'light',
         md = true,
-        headline = '**Hello** World',
+        text = '**Hello** World',
         images=[imageLightOptions[0].value],
         widths=[],
         heights=[],
@@ -277,7 +277,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
                 H(Field, {
                     label: 'Text Input',
                     input: H(TextInput, {
-                        value: headline,
+                        value: text,
                         oninput: (val: string) => {
                             console.log('oninput ' + val);
                             setLoadingState({ text: val, overrideUrl: url });
