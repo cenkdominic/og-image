@@ -1,11 +1,7 @@
 
 import { readFileSync } from 'fs';
-import { marked } from 'marked';
 import { sanitizeHtml } from './sanitizer';
 import { ParsedRequest } from './types';
-const twemoji = require('twemoji');
-const twOptions = { folder: 'svg', ext: '.svg' };
-const emojify = (text: string) => twemoji.parse(text, twOptions);
 
 const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
 const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
@@ -53,13 +49,6 @@ function getCss(theme: string, fontSize: string) {
     body, html {height: 100%;}
     *, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
- 
-    .emoji {
-        height: 1em;
-        width: 1em;
-        margin: 0 .05em 0 .1em;
-        vertical-align: -0.1em;
-    }
     
     .text {
         width: 1120px;
@@ -93,7 +82,7 @@ function getCss(theme: string, fontSize: string) {
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-    const { text, theme, md, fontSize } = parsedReq;
+    const { text, theme, fontSize } = parsedReq;
     return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
@@ -107,9 +96,7 @@ export function getHtml(parsedReq: ParsedRequest) {
     <body>
         <div class="image">
         <div class="text">
-            <div class="headline">${emojify(
-                md ? marked(text) : sanitizeHtml(text)
-            )}
+            <div class="headline">${text}
             </div>
             
             <div class="subheadline">Cenk Özbakır
