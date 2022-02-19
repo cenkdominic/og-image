@@ -61,24 +61,25 @@ function getCss(theme: string, fontSize: string) {
         vertical-align: -0.1em;
     }
     
-    .headline {
-        font-family: 'Inter', sans-serif;
-        font-size: ${sanitizeHtml(fontSize)};
-        font-style: normal;
-        color: ${foreground};
-        line-height: 1.8;
+    .text {
         width: 1120px;
         height: 200px;
+        line-height: 1.8;
+        font-style: normal;
+        font-size: ${sanitizeHtml(fontSize)};
+    }
+    
+    .headline {
+        font-family: 'Inter', sans-serif;
+        font-size: 1em;
+        color: ${foreground};
     }
     
     .subheadline {
         font-family: 'Inter', sans-serif;
-        font-size: 22px;
-        font-style: normal;
-        color: ${foreground};
+        font-size: 0.5em;
+        color: grey;
         line-height: 1.8;
-        width: 1120px;
-        height: 200px;
     }
     
     .image {
@@ -105,6 +106,7 @@ export function getHtml(parsedReq: ParsedRequest) {
     
     <body>
         <div class="image">
+        <div class="text">
             <div class="headline">${emojify(
                 md ? marked(text) : sanitizeHtml(text)
             )}
@@ -112,10 +114,11 @@ export function getHtml(parsedReq: ParsedRequest) {
             
             <div class="subheadline">Cenk Özbakır
             </div>
+        </div>
             
         </div>
         <script>
-        textFit(document.querySelector(".headline"));
+        textFit(document.querySelector(".text"));
         </script>
     </body>
 </html>`;
