@@ -77,7 +77,7 @@ function getCss(theme: string, fontSize: string) {
     
     .subheadline {
         font-family: 'Inter', sans-serif;
-        font-size: 0.5em;
+        font-size: 0.75em;
         color: grey;
         line-height: 1.8;
     }
