@@ -92,9 +92,7 @@ export function getHtml(parsedReq: ParsedRequest) {
         ${getCss(theme, fontSize)}
     </style>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js"></script>
-    <script>
-    textFit(document.querySelector(".headline"));
-    </script>
+    
     <body>
         <div class="image">
             <div class="headline">${emojify(
@@ -102,6 +100,9 @@ export function getHtml(parsedReq: ParsedRequest) {
             )}
             </div>
         </div>
+        <script>
+        textFit(document.querySelector(".headline"));
+        </script>
     </body>
 </html>`;
 }
