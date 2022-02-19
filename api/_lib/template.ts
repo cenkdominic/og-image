@@ -67,6 +67,8 @@ function getCss(theme: string, fontSize: string) {
         font-style: normal;
         color: ${foreground};
         line-height: 1.8;
+        width: 1160px;
+        height: 400px;
     }
     
     .image {
@@ -89,6 +91,10 @@ export function getHtml(parsedReq: ParsedRequest) {
     <style>
         ${getCss(theme, fontSize)}
     </style>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js"></script>
+    <script>
+    textFit(document.querySelector(".headline"));
+    </script>
     <body>
         <div class="image">
             <div class="headline">${emojify(
