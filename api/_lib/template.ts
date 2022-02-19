@@ -82,7 +82,7 @@ function getCss(theme: string, fontSize: string) {
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-    const { text, theme, fontSize } = parsedReq;
+    const { text, author, theme, fontSize } = parsedReq;
     return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
@@ -99,7 +99,7 @@ export function getHtml(parsedReq: ParsedRequest) {
             <div class="headline">${text}
             </div>
             
-            <div class="subheadline">Cenk Özbakır
+            <div class="subheadline">${author}
             </div>
         </div>
             
