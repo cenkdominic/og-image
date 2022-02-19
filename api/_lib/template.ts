@@ -46,12 +46,7 @@ function getCss(theme: string, fontSize: string) {
     body {
         background: ${background};
         background-color: red;
-        background-size: 100px 100px;
         height: 100vh;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
     }
 
     code {
@@ -124,13 +119,6 @@ export function getHtml(parsedReq: ParsedRequest) {
     </style>
     <body>
         <div class="image">
-            <div class="spacer">
-            <div class="logo-wrapper">
-                ${images.map((img, i) =>
-                    getPlusSign(i) + getImage(img, widths[i], heights[i])
-                ).join('')}
-            </div>
-            <div class="spacer">
             <div class="heading">${emojify(
                 md ? marked(text) : sanitizeHtml(text)
             )}
