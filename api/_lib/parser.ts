@@ -17,7 +17,7 @@ export function parseRequest(req: IncomingMessage) {
     const arr = (pathname || '/').slice(1).split('.');
     let extension = '';
     let text = '';
-    let author = '';
+
     if (arr.length === 0) {
         text = '';
     } else if (arr.length === 1) {
@@ -30,7 +30,7 @@ export function parseRequest(req: IncomingMessage) {
     const parsedRequest: ParsedRequest = {
         fileType: extension === 'jpeg' ? extension : 'png',
         text: decodeURIComponent(text),
-        author: author || 'Cenk',
+        author: author,
         theme: theme === 'dark' ? 'dark' : 'light',
         md: md === '1' || md === 'true',
         fontSize: fontSize || '96px',
