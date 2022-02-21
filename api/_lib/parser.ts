@@ -10,6 +10,9 @@ export function parseRequest(req: IncomingMessage) {
     if (Array.isArray(fontSize)) {
         throw new Error('Expected a single fontSize');
     }
+    if (Array.isArray(author)) {
+        throw new Error('Expected a single fontSize');
+    }
     if (Array.isArray(theme)) {
         throw new Error('Expected a single theme');
     }
