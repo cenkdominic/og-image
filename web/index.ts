@@ -206,7 +206,6 @@ const App = (_: any, state: AppState, setState: SetState) => {
         theme = 'light',
         md = true,
         text = '**Hello** World',
-        author = 'Author', 
         images=[imageLightOptions[0].value],
         widths=[],
         heights=[],
