@@ -36,7 +36,7 @@ function getCss(theme: string, fontSize: string) {
 
     body {
         background: ${background};
-        background-color: red;
+        background-color: #f9f8f6;
         height: 100vh;
         
     }
