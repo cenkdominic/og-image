@@ -3,9 +3,9 @@ import { readFileSync } from 'fs';
 import { sanitizeHtml } from './sanitizer';
 import { ParsedRequest } from './types';
 
-const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
-const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
-const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
+const rglr = readFileSync(`${__dirname}/../_fonts/lmroman10-regular.woff2`).toString('base64');
+const italic = readFileSync(`${__dirname}/../_fonts/lmroman10-italic.woff2`).toString('base64');
+
 
 function getCss(theme: string, fontSize: string) {
     let background = 'white';
@@ -19,25 +19,20 @@ function getCss(theme: string, fontSize: string) {
     }
     return `
     @font-face {
-        font-family: 'Inter';
+        font-family: 'Latin Modern';
         font-style:  normal;
         font-weight: normal;
         src: url(data:font/woff2;charset=utf-8;base64,${rglr}) format('woff2');
     }
 
     @font-face {
-        font-family: 'Inter';
-        font-style:  normal;
-        font-weight: bold;
-        src: url(data:font/woff2;charset=utf-8;base64,${bold}) format('woff2');
+        font-family: 'Latin Modern';
+        font-style:  italic;
+        font-weight: normal;
+        src: url(data:font/woff2;charset=utf-8;base64,${italic}) format('woff2');
     }
 
-    @font-face {
-        font-family: 'Vera';
-        font-style: normal;
-        font-weight: normal;
-        src: url(data:font/woff2;charset=utf-8;base64,${mono})  format("woff2");
-      }
+   
 
     body {
         background: ${background};
@@ -59,13 +54,14 @@ function getCss(theme: string, fontSize: string) {
     }
     
     .headline {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Latin Modern', sans-serif;
         font-size: 1em;
         color: ${foreground};
     }
     
     .subheadline {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Latin Modern', sans-serif;
+        font-style: italic;
         font-size: 0.75em;
         color: grey;
         line-height: 1.8;
