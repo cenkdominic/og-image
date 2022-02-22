@@ -45,16 +45,16 @@ function getCss(theme: string, fontSize: string) {
     *, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
     .image {
-        width: 1200px;
-        height: 630px;
+        width: 100%;
+        height: 100%;
         padding: 40px;
         background-color: #f9f8f6;
     }
     
     
     .text {
-        width: 1120px;
-        height: 500px;
+        width: 90%;
+        height: 80%;
         line-height: 1.16;
         font-style: normal;
         font-size: ${sanitizeHtml(fontSize)};
