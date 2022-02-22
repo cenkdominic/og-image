@@ -87,7 +87,7 @@ export function getHtml(parsedReq: ParsedRequest) {
     return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
-    <title>Generated Image</title>
+    <title>OA.mg OG Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         ${getCss(theme, fontSize)}
