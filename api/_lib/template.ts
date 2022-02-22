@@ -53,8 +53,8 @@ function getCss(theme: string, fontSize: string) {
     
     
     .text {
-        width: 90%;
-        height: 80%;
+        width: 100%;
+        height: 90%;
         line-height: 1.16;
         font-style: normal;
         font-size: ${sanitizeHtml(fontSize)};
