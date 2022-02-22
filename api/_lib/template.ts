@@ -44,18 +44,27 @@ function getCss(theme: string, fontSize: string) {
     body, html {height: 100%;}
     *, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
+    .image {
+        width: 1200px;
+        height: 630px;
+        padding: 40px;
+        background-color: #f9f8f6;
+    }
+    
     
     .text {
         width: 1120px;
-        height: 200px;
-        line-height: 1.8;
+        height: 500px;
+        line-height: 1.16;
         font-style: normal;
         font-size: ${sanitizeHtml(fontSize)};
+        
     }
     
     .headline {
         font-family: 'Latin Modern', sans-serif;
         font-size: 1em;
+        line-height: 1.16;
         color: ${foreground};
     }
     
@@ -63,16 +72,12 @@ function getCss(theme: string, fontSize: string) {
         font-family: 'Latin Modern', sans-serif;
         font-style: italic;
         font-size: 0.75em;
+        line-height: 1.16;
         color: grey;
         line-height: 1.8;
     }
     
-    .image {
-        background: #fff;
-        width: 1200px;
-        height: 630px;
-        padding: 40px;
-    }
+    
     
     `;
 }
