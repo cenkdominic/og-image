@@ -78,7 +78,7 @@ function getCss(theme: string, fontSize: string) {
     }
     
     .logo {
-        width: 140px; 
+        width: 160px; 
         height: auto;
         position: absolute; 
         right: 40px;
