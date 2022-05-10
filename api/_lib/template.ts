@@ -73,7 +73,7 @@ function getCss(theme: string, fontSize: string) {
         font-style: italic;
         font-size: 0.75em;
         line-height: 1.16;
-        color: grey;
+        color: #6E6F7B;
         line-height: 1.8;
     }
     
