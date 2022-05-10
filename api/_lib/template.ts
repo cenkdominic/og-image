@@ -70,7 +70,6 @@ function getCss(theme: string, fontSize: string) {
     
     .subheadline {
         font-family: 'Latin Modern', sans-serif;
-        font-style: italic;
         font-size: 0.75em;
         line-height: 1.16;
         color: #6E6F7B;
@@ -78,7 +77,7 @@ function getCss(theme: string, fontSize: string) {
     }
     
     .logo {
-        width: 160px; 
+        width: 170px; 
         height: auto;
         position: absolute; 
         right: 40px;
