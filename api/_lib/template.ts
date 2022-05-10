@@ -76,6 +76,14 @@ function getCss(theme: string, fontSize: string) {
         line-height: 1.8;
     }
     
+    .logo {
+        width: 100px; 
+        height: auto;
+        position: absolute; 
+        right: 20px;
+        bottom: 20px;
+    }
+    
     
     
     `;
@@ -102,7 +110,7 @@ export function getHtml(parsedReq: ParsedRequest) {
             <div class="subheadline">${author}
             </div>
         </div>
-            
+        <img class="logo" src="/oamg.svg" />
         </div>
         <script>
         textFit(document.querySelector(".text"));
