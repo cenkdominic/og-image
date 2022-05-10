@@ -48,6 +48,7 @@ function getCss(theme: string, fontSize: string) {
         height: 100%;
         padding: 40px;
         background-color: #fdf7f2;
+        position: relative;
     }
     
     
@@ -77,11 +78,11 @@ function getCss(theme: string, fontSize: string) {
     }
     
     .logo {
-        width: 100px; 
+        width: 120px; 
         height: auto;
         position: absolute; 
-        right: 20px;
-        bottom: 20px;
+        right: 30px;
+        bottom: 30px;
     }
     
     
