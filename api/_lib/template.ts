@@ -111,7 +111,7 @@ export function getHtml(parsedReq: ParsedRequest) {
             <div class="subheadline">${author}
             </div>
         </div>
-        <img class="logo" src="/oamg.svg" />
+        <img class="logo" src="https://og.oa.mg/oamg.svg" />
         </div>
         <script>
         textFit(document.querySelector(".text"));

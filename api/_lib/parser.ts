@@ -63,7 +63,7 @@ function getDefaultImages(images: string[], theme: Theme): string[] {
     if (!images || !images[0]) {
         return [defaultImage];
     }
-    if (!images[0].startsWith('https://oa.mg/')) {
+    if (!images[0].startsWith('https://og.oa.mg/')) {
         images[0] = defaultImage;
     }
     return images;
