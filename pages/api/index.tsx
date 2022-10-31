@@ -8,12 +8,12 @@ export const config = {
   runtime: 'experimental-edge',
 };
 
-const font1 = fetch(new URL('../../assets/inter-v8-latin-700.ttf', import.meta.url)).then(
+const font1 = fetch(new URL('../../assets/inter-v12-700.ttf', import.meta.url)).then(
   (res) => res.arrayBuffer(),
 );
 
 
-const font2 = fetch(new URL('../../assets/inter-v8-latin-600.ttf', import.meta.url)).then(
+const font2 = fetch(new URL('../../assets/inter-v12-600.ttf', import.meta.url)).then(
   (res) => res.arrayBuffer(),
 );
 
