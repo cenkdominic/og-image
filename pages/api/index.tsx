@@ -57,7 +57,6 @@ export default async function handler(req: NextRequest) {
 			  textAlign: 'left',
 			  backgroundImage: 'linear-gradient(90deg, rgb(0, 11, 128), rgb(0, 223, 216))',
 			  backgroundClip: 'text',
-			  '-webkit-background-clip': 'text',
 			  color: 'transparent',
 			}}
 		  >
@@ -71,7 +70,6 @@ export default async function handler(req: NextRequest) {
 			  textAlign: 'left',
 			  backgroundImage: 'linear-gradient(90deg, rgb(121, 40, 202), rgb(255, 0, 128))',
 			  backgroundClip: 'text',
-			  '-webkit-background-clip': 'text',
 			  color: 'transparent',
 			}}
 		  >
