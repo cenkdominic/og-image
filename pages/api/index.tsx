@@ -23,7 +23,7 @@ export default async function handler(req: NextRequest) {
 	const fontData2 = await font2;
   try {
 	const { searchParams } = new URL(req.url);
-	const title = decodeURI(req.nextUrl.pathname.substring(1).slice(0, -4));
+	const title = decodeURIComponent(req.nextUrl.pathname.substring(1).slice(0, -4));
 	  
 	const hasAuthor = searchParams.has('author');
 	const author = hasAuthor
